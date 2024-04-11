@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="803.0" prefWidth="899.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practica_ajedrez.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="859.0">
+         <children>
+            <Button fx:id="Black_Attack" mnemonicParsing="false" onAction="#mostrar_ataque_negras" text="Ataque negras" />
+            <VBox alignment="CENTER" prefHeight="140.0" prefWidth="352.0">
+               <children>
+                  <Label fx:id="turn_label" text="Juegan las blancas">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="boton_volver" mnemonicParsing="false" onAction="#volver_atras" text="VOLVER">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Label fx:id="Info_label" alignment="CENTER" contentDisplay="CENTER" prefHeight="76.0" prefWidth="242.0" />
+               </children>
+            </VBox>
+            <ImageView fx:id="turn_image" fitHeight="140.0" fitWidth="148.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="White_Attack" mnemonicParsing="false" onAction="#mostrar_ataque_blancas" text="Ataque blancas" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+             <GridPane alignment="CENTER" hgap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" vgap="0.0">
+                 <columnConstraints>
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                 </columnConstraints>
+                 <rowConstraints>
+                     <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                     <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                 </rowConstraints>
+                 <!-- FILA 0 -->
+                 <StackPane fx:id="sp00" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell00" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp01" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell01" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp02" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell02" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp03" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell03" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp04" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="0">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell04" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp05" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="0">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell05" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp06" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="0">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell06" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp07" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="0">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell07" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+      
+                 <!-- FILA 1 -->
+                 <StackPane fx:id="sp10" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell10" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp11" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell11" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp12" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell12" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp13" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell13" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp14" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell14" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp15" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell15" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp16" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell16" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp17" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell17" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+      
+                 <!-- FILA 2 -->
+                 <StackPane fx:id="sp20" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell20" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp21" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell21" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp22" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell22" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp23" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell23" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp24" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell24" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp25" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell25" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp26" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell26" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp27" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="2">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell27" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+      
+                 <!-- FILA 3 -->
+                 <StackPane fx:id="sp30" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell30" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp31" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell31" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp32" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell32" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp33" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell33" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp34" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell34" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp35" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell35" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp36" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell36" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp37" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="3">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell37" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+      
+                 <!-- FILA 4 -->
+                 <StackPane fx:id="sp40" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell40" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp41" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell41" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp42" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell42" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp43" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell43" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp44" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell44" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp45" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell45" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp46" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell46" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp47" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="4">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell47" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+      
+                 <!-- FILA 5 -->
+                 <StackPane fx:id="sp50" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="0" GridPane.rowIndex="5">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell50" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp51" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell51" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp52" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell52" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp53" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell53" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp54" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell54" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp55" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell55" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp56" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="5">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell56" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp57" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="5">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell57" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+      
+                 <!-- FILA 6 -->
+                 <StackPane fx:id="sp60" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="0" GridPane.rowIndex="6">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell60" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp61" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell61" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp62" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell62" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp63" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell63" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp64" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell64" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp65" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell65" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp66" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="6">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell66" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp67" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="6">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell67" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+      
+                 <!-- FILA 7 -->
+                 <StackPane fx:id="sp70" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="0" GridPane.rowIndex="7">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell70" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp71" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell71" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp72" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell72" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp73" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell73" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp74" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="7">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell74" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp75" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="7">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell75" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp76" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="7">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#130B05" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell76" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+                 <StackPane fx:id="sp77" onMouseClicked="#handleCellClick" prefHeight="70.0" prefWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="7">
+                     <children>
+                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7af8d" height="77.0" width="75.0" />
+                         <ImageView fx:id="cell77" fitHeight="69.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                 </StackPane>
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+             </GridPane>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="escoger_caballo_id" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#escoger_caballo_función" prefHeight="70.0" prefWidth="70.0">
+                     <graphic>
+                        <ImageView fx:id="escoger_caballo_ImageView" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </Button>
+                   <Button fx:id="escoger_alfil_id" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#escoger_alfil_función" prefHeight="70.0" prefWidth="70.0">
+                       <graphic>
+                           <ImageView fx:id="escoger_alfil_ImageView" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
+                       </graphic>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                   </Button>
+                   <Button fx:id="escoger_torre_id" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#escoger_torre_función" prefHeight="70.0" prefWidth="70.0">
+                       <graphic>
+                           <ImageView fx:id="escoger_torre_ImageView" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
+                       </graphic>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                   </Button>
+                   <Button fx:id="escoger_reina_id" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#escoger_reina_función" prefHeight="70.0" prefWidth="70.0">
+                       <graphic>
+                           <ImageView fx:id="escoger_reina_ImageView" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" />
+                       </graphic>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                   </Button>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
