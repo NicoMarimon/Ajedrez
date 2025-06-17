@@ -2,7 +2,7 @@
 <h1 align="center">Aplicación de Ajedrez</h1>
 
 <!-- Autores -->
-<p align="center"><strong>Autores:</strong> Nicolás Marimón y Lucca Castellarnau</p>
+<p align="center"><strong>Autores:</strong> Nicolás Marimón</p>
 
 <p align="center">
   <img src="https://github.com/La-Salle-Gracia-FP/asix1-m03-uf2-pr-lucca-castellarnau-nicolas-marimon/assets/104520422/c47a005e-0eb5-4961-918a-87ace50b08b5" alt="Captura de pantalla" width="600">
